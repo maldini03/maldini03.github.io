@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js" style="display: block;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="bananadroid">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>BananaDroid</title>
+
+    <link href="http://fonts.cdnfonts.com/css/cleanvertising" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body style="display: block;" class="w-100"><button type="button" id="mobile-nav-toggle"><i class="bi bi-filter-right"></i></button>
+    <header id="header" class=" w-100">
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="/" style="font-weight: bold;"><img src="./assets/logo.png" alt="" title="">BananaDroid</a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                        <li><a href="/" class="menu-active"><i class="bi bi-house mr-1"></i>Home</a></li>
+                        <li><a href="https://bananadroid.net/download"><i class="bi bi-download mr-1"></i>Download</a></li>
+                        <li><a href="#support"><i class="bi bi-person mr-1"></i>Support</a></li>
+                        <li><a href="https://paypal.me/travarilo"><i class="bi bi-cup mr-1"></i>Donate</a></li>
+                        <li><a href="https://github.com/bananadroid"><i class="bi bi-github mr-1"></i>Github</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-area">
+        <div class="container">
+            <div class="row fullscreen align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-6 banner-left">
+                    <h6>This is</h6>
+                    <h1>BananaDroid</h1>
+                    <p>
+                        An usual Custom ROM based on AOSP with usual customizations and features
+                    </p>
+                    <a href="https://bananadroid.net/download" class="primary-btn text-uppercase">Grab your Banana</a>
+                </div>
+                <div class="col-lg-6 col-md-6 banner-right d-flex align-self-end">
+                    <img class="img-fluid p-3" src="./assets/home_phone.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-about-area pt-120 ">
+        <div class="container mx-auto">
+            <div class="row align-items-center mx-auto justify-content-between">
+                <div class="col-lg-6 col-md-6 home-about-left">
+                    <img class="img-fluid" width="50%" src="./assets/img/10.png" alt="">
+                </div>
+                <div class="col-lg-5 col-md-6 home-about-right">
+                    <h6></h6>
+                    <h1 class="text-uppercase">Get Changelog Here</h1>
+                    <p>
+                        BananaDroid latest changes
+                    </p>
+                    <button class="primary-btn text-uppercase" type="button" data-toggle="modal" data-target="#exampleModal">View Full Details</button>
+                </div>
+
+                <script>
+                    async function fetchTest() {
+                        let response = await fetch('https://raw.githubusercontent.com/bananadroid/bananadroid.net/master/changelog.md');
+                        let responseText = await response.text();
+
+                        document.getElementById('result').innerHTML = responseText;
+                    }
+
+                    (async() => {
+                        await fetchTest();
+                    })();
+                </script>
+
+                <div class="modal fade w-100" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered ">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Changelog</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                            </div>
+                            <div class="modal-body">
+                                <pre id="result"></pre>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="http://paypal.me/travarilo" type="button" class="btn primary-btn">Donate</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services-area section-gap">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content  col-lg-7">
+                    <div class="title text-center">
+                        <h1 class="mb-10">About BananaDroid</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-pie-chart"></span>
+                        <a href="">
+                            <h4>Stability</h4>
+                        </a>
+                        <p>
+                            We try to always focus on stability
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-laptop-phone"></span>
+                        <a href="">
+                            <h4>Code</h4>
+                        </a>
+                        <p>
+                            Sharing is caring
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-camera"></span>
+                        <a href="">
+                            <h4>Features</h4>
+                        </a>
+                        <p>
+                            Some additional features that can make your life is more colorful
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-picture"></span>
+                        <a href="">
+                            <h4>Support</h4>
+                        </a>
+                        <p>
+                            We hope our little community group can help you get your answer about BananaDroid
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="facts-area section-gap m-3" id="Screenshots">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 single-fact">
+                    <h1>Screenshots</h1>
+                </div>
+                <div class="col-lg-3 col-md-6 single-fact">
+                    <h1 class="counter">10</h1>
+                    <h1>+</h1>
+                    <p>Device Support</p>
+                </div>
+                <div class="col-lg-3 col-md-6 single-fact">
+                    <h1 class="counter">1000</h1>
+                    <h1>+</h1>
+                    <p>Downloads</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <center class="section-gap" id="portfolio">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/1.png" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/2.png" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/3.png" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/4.png" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/5.png" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/6.png" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/10.png" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/8.png" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="./assets/img/9.png" alt="">
+            </div>
+        </div>
+    </center>
+
+    <section class="price-area section-gap" id="support">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Our Team And Support</h1>
+                        <p>We hope we can support you</p>
+                    </div>
+                </div>
+            </div>
+https://avatars.githubusercontent.com/u/22468700?v=4
+            <div class="row">
+                <div class="col-lg-3 col-md-6 single-price">
+                    <div class="top-part">
+                        <h1 class="package-no"> <img width="100%" style="border-radius:99px;" src="https://avatars.githubusercontent.com/u/22468700?v=4" alt=""></h1>
+                        <h4>travarilo</h4>
+                        <p class="mt-10">Banana Lover</p>
+                    </div>
+                    <div class="package-list">
+                        <ul>
+                            <li><a type="button" href="https://t.me/travarilo" class="btn text-white btn-primary" style="border-radius:99px;"><i class="bi bi-telegram mr-1"></i>Telegram</a>
+                                <li><a type="button" href="https://github.com/travarilo" class="btn text-white btn-dark" style="border-radius:99px;"><i class="bi bi-github mr-1"></i>Github</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h4>BananaDroid</h4>
+                        <p>
+                            Nothing special
+                        </p>
+                        <p class="footer-text">
+                            Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This website is designed by <a href="https://t.me/overclockedboi" target="_blank">overclockedboi</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h4>Newsletter</h4>
+                        <a href=" https://t.me/bananadroidchannel">
+                            <h2><i class="bi bi-newspaper text-white "></i></a>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                    <div class="single-footer-widget">
+                        <h4>Join Us</h4>
+
+                        <div class="footer-social d-flex align-items-center">
+                            <a href="https://github.com/bananadroid"><i class="bi bi-github"></i></a>
+                            <a href="https://t.me/bananadroid"><i class="bi bi-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/jquery-2.2.4.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.counterup.min.js.download"></script>
+    <script src="./assets/js/easing.min.js"></script>
+    <script src="./assets/js/hoverIntent.js"></script>
+    <script src="./assets/js/jquery.tabs.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <div id="mobile-body-overly" style="display: none;"></div>
+</body>
+</html>
